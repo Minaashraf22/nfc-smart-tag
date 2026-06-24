@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(174, 203, 0, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #AECB00 0%, #d4f000 50%, #88a800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-white {
+    background: linear-gradient(135deg, #ffffff 0%, #e8f5a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #1a2000 0%, #2d3d00 30%, #1c2800 60%, #0f1a00 100%);
+  }
+
+  .bg-hero-gradient {
+    background: radial-gradient(ellipse at 20% 50%, rgba(174, 203, 0, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(174, 203, 0, 0.08) 0%, transparent 40%),
+                linear-gradient(160deg, #0e1500 0%, #1a2600 40%, #0a1000 100%);
+  }
+
+  .nfc-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(174, 203, 0, 0.6);
+    animation: pulseRing 2s ease-out infinite;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(174, 203, 0, 0.2);
+  }
+
+  .section-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .section-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .shimmer-btn {
+    background: linear-gradient(135deg, #AECB00, #d4f000, #AECB00);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .tag-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .scan-line {
+    background: linear-gradient(to bottom, transparent, rgba(174, 203, 0, 0.8), transparent);
+    animation: scanMove 2s ease-in-out infinite;
+  }
+
+  @keyframes scanMove {
+    0% { top: 10%; opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { top: 90%; opacity: 0; }
+  }
+
+  @keyframes pulseRing {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom NFC wave animation */
+.nfc-wave-container {
+  position: relative;
+}
+
+.nfc-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(174, 203, 0, 0.5);
+  animation: nfcWave 2.5s ease-out infinite;
+}
+
+.nfc-wave:nth-child(2) { animation-delay: 0.5s; }
+.nfc-wave:nth-child(3) { animation-delay: 1s; }
+.nfc-wave:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes nfcWave {
+  0% { width: 40px; height: 40px; opacity: 1; }
+  100% { width: 200px; height: 200px; opacity: 0; }
+}
+
+/* Smooth section transitions */
+section {
+  transition: background 0.5s ease;
+}
