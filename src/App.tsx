@@ -9,6 +9,7 @@ import SecuritySection from './components/SecuritySection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import ParticleBackground from './components/ParticleBackground';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   // Intersection observer for section fade animations
@@ -41,6 +42,7 @@ export default function App() {
         <SecuritySection />
         <CTASection />
         <Footer />
+        <Analytics />
       </div>
     </div>
   );
