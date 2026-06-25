@@ -112,7 +112,8 @@ export default function HeroSection() {
 
             {/* Google Play */}
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=com.wakdev.wdnfc"
+              target="_blank"
               className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-4 py-3 transition hover:border-[#AECB00]/50 hover:bg-[#AECB00]/10 sm:flex-1"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#AECB00] to-[#8FB000] flex items-center justify-center">
@@ -128,7 +129,8 @@ export default function HeroSection() {
 
             {/* App Store */}
             <a
-              href="#"
+              href="https://apps.apple.com/app/nfc-tools/id1252962749"
+              target="_blank"
               className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-4 py-3 transition hover:border-[#AECB00]/50 hover:bg-[#AECB00]/10 sm:flex-1"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#AECB00] to-[#8FB000] flex items-center justify-center">
