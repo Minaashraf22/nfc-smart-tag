@@ -1,4 +1,4 @@
-import { Wifi, Instagram, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Wifi, Instagram, Facebook, Mail, Phone, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -30,21 +30,23 @@ export default function Footer() {
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3">
-              {[
-                { icon: Instagram, href: '#' },
-                { icon: Twitter, href: '#' },
-                { icon: Facebook, href: '#' },
-              ].map(({ icon: Icon, href }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  className="w-9 h-9 rounded-full flex items-center justify-center glass hover:bg-[#AECB00]/20 hover:border-[#AECB00]/40 transition-all duration-300"
-                  style={{ border: '1px solid rgba(255,255,255,0.1)' }}
-                >
-                  <Icon size={15} className="text-white/60 hover:text-[#AECB00]" />
-                </a>
-              ))}
-            </div>
+  {[
+    { icon: Instagram, href: 'https://www.instagram.com/arrow_footwear/?fbclid=IwAR0TMrY0axvYDUcLhB3yDoAstI-NDuOIkNfDeDRr5HveIOAT5V6OnQ_fjcs' },
+    { icon: Youtube, href: 'https://www.youtube.com/channel/UCbRaj5AsvFphXMk8ZkC4QkQ/featured' },
+    { icon: Facebook, href: 'https://www.facebook.com/Arrow.Footwear.Egypt' },
+  ].map(({ icon: Icon, href }, i) => (
+    <a
+      key={i}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-9 h-9 rounded-full flex items-center justify-center glass hover:bg-[#AECB00]/20 hover:border-[#AECB00]/40 transition-all duration-300"
+      style={{ border: '1px solid rgba(255,255,255,0.1)' }}
+    >
+      <Icon size={15} className="text-white/60 hover:text-[#AECB00]" />
+    </a>
+  ))}
+</div>
           </div>
 
           {/* Quick links */}
@@ -58,8 +60,7 @@ export default function Footer() {
                 { label: 'Features', href: '#features' },
                 { label: 'NFC Setup Guide', href: '#nfc-setup' },
                 { label: 'Security & Privacy', href: '#security' },
-                { label: 'Order Now', href: '#cta' },
-              ].map((l) => (
+                              ].map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
@@ -90,7 +91,7 @@ export default function Footer() {
                   <div>
                     <p className="text-white/30 text-xs">Email</p>
                     <p className="text-white/60 text-sm group-hover:text-[#AECB00] transition-colors">
-                      hello@arrowfootwear.com
+                      arrow@almahabagroup.com
                     </p>
                   </div>
                 </a>
@@ -103,19 +104,14 @@ export default function Footer() {
                   <div>
                     <p className="text-white/30 text-xs">Phone</p>
                     <p className="text-white/60 text-sm group-hover:text-[#AECB00] transition-colors">
-                      +20 1228102517
+                      +20 1275853763
                     </p>
                   </div>
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#AECB00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <MapPin size={13} className="text-[#AECB00]" />
-                </div>
-                <div>
-                  <p className="text-white/30 text-xs">Location</p>
-                  <p className="text-white/60 text-sm">Global shipping available</p>
-                </div>
+               
+               
               </li>
             </ul>
           </div>

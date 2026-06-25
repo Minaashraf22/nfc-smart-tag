@@ -160,7 +160,7 @@ export default function DemoSection() {
                   <User size={22} className="text-[#0e1500]" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-lg">Mena Ashraf</p>
+                  <p className="text-white font-bold text-lg">Lionel</p>
                   <div className="flex items-center gap-1.5">
                     <div className="w-2 h-2 rounded-full bg-[#AECB00] animate-pulse" />
                     <p className="text-[#AECB00] text-xs font-medium">NFC Tag · Arrow Smart</p>
@@ -176,7 +176,7 @@ export default function DemoSection() {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs">Phone</p>
-                    <p className="text-white font-semibold text-sm">+20 1228102517</p>
+                    <p className="text-white font-semibold text-sm">+20 123456789</p>
                   </div>
                 </div>
 
@@ -186,7 +186,7 @@ export default function DemoSection() {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs">Email</p>
-                    <p className="text-white font-semibold text-sm">menaashraf1517@gmail.com</p>
+                    <p className="text-white font-semibold text-sm">Lionel@gmail.com</p>
                   </div>
                 </div>
 

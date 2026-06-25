@@ -16,6 +16,7 @@ export default function Navbar() {
     { label: 'Features', href: '#features' },
     { label: 'NFC Setup', href: '#nfc-setup' },
     { label: 'Security', href: '#security' },
+    { label: 'Stores', href: '#contact' }, // 👈 إضافة السكشن الجديد
   ];
 
   return (
@@ -29,22 +30,23 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
 
-         {/* Logo */}
-<a
-  href="https://www.arrowfootwear.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-2 group"
->
-  <img
-    src="/11.png"
-    alt="Arrow Footwear"
-    className="w-11 h-11 object-contain"
-  />
-  <span className="text-white font-bold text-lg hidden sm:block">
-    ARROW <span className="text-gradient">Smart Tag</span>
-  </span>
-</a>
+          {/* Logo */}
+          <a
+            href="https://www.arrowfootwear.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 group"
+          >
+            <img
+              src="/11.png"
+              alt="Arrow Footwear"
+              className="w-11 h-11 object-contain"
+            />
+            <span className="text-white font-bold text-lg hidden sm:block">
+              ARROW <span className="text-gradient">Smart Tag</span>
+            </span>
+          </a>
+
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
             {links.map((l) => (
@@ -57,18 +59,19 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-{/* CTA Button */}
-<div className="hidden md:flex items-center gap-3">
-  <a
-    href="https://www.arrowfootwear.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="shimmer-btn text-[#0e1500] font-bold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 hover:scale-105 transition-transform duration-200"
-  >
-    <Wifi size={14} />
-    Order Now
-  </a>
-</div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://www.arrowfootwear.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shimmer-btn text-[#0e1500] font-bold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 hover:scale-105 transition-transform duration-200"
+            >
+              <Wifi size={14} />
+              Explore Our Products
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -96,12 +99,12 @@ export default function Navbar() {
           ))}
 
           <a
-            href="#cta"
+            href="#contact"
             className="shimmer-btn text-[#0e1500] font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 mt-2"
             onClick={() => setOpen(false)}
           >
             <Wifi size={16} />
-            Order Now
+            Find Stores
           </a>
         </div>
       )}
